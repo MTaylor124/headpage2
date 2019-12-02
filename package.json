@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.7.1",
+    "axios": "^0.19.0",
+    "dayjs": "^1.8.17",
+    "hoist-non-react-statics": "^3.3.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -28,5 +32,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "https://us-east1-socialmediatest-7b11f.cloudfunctions.net/api"
 }
