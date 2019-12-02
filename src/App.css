@@ -6,14 +6,13 @@ html, body {
 }
 
 .container {
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     margin: 70px auto 0 auto;
     padding: 10px;
     background-color: rgba(255,255,255,0.15);
-    max-width: 80%;
-
+    width: 70%;
 }
 
 .toolbar-style {
@@ -31,9 +30,13 @@ html, body {
 }
 
 .sitePicPlaceholder {
-    height: 300px;
-    width: 300px;
-    background-color: teal;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .thoughtstyle {
     margin: 10px;
