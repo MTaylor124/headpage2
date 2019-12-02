@@ -30,6 +30,11 @@ html, body {
     border-radius: 15px;
 }
 
+.sitePicPlaceholder {
+    height: 300px;
+    width: 300px;
+    background-color: teal;
+}
 .thoughtstyle {
     margin: 10px;
 }

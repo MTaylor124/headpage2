@@ -7,6 +7,8 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 // const Link = require("react-router-dom").Link
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
 import { Link } from 'react-router-dom'
 const styles = {
     card: {
@@ -24,6 +26,7 @@ const styles = {
 }
 class Thought extends Component {
     render () {
+        dayjs.extend(relativeTime)
         const { classes, thought : {
                 // thoughtId,
                 // likeCount,
@@ -45,7 +48,7 @@ class Thought extends Component {
                     component={Link}
                     to={`/user/${username}`}
                     color="primary">{username}</Typography>
-                    <Typography variant="body2" color="textSecondary">{createdAt}</Typography>
+                    <Typography variant="body2" color="textSecondary">{dayjs(createdAt).fromNow()}</Typography>
                     <Typography variant="body1">{body}</Typography>
                 </CardContent>
             </Card>
