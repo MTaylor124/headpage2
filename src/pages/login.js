@@ -7,6 +7,7 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import { Link } from 'react-router-dom'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import welcomeIcon from './../components/welcomepic.png'
 
 import axios from 'axios'
 
@@ -99,7 +100,7 @@ class Login extends Component {
         return (
             <Grid container className={classes.form}>
                 <Grid item sm>
-                    <div className='sitePicPlaceholder'>headpage pic</div>
+                    <img src={welcomeIcon} alt="welcome" className={classes.welcome}/>
                     <Typography variant='h3' className={classes.pageTitle}>LOGIN</Typography>
                     <form noValidate onSubmit={this.handleSubmit} className={classes.columnForm}>
                         <TextField

@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import { Link } from 'react-router-dom'
 import CircularProgress from '@material-ui/core/CircularProgress'
-
+import welcomeIcon from './../components/welcomepic.png'
 import axios from 'axios'
 
 const style = {
@@ -54,6 +54,9 @@ const style = {
         justifyContent: 'center',
         alignItems: 'center'
     },
+    welcome: {
+        height: '200px'
+    }
 }
 
 
@@ -103,8 +106,8 @@ class Signup extends Component {
         return (
             <Grid container className={classes.form}>
                 <Grid item sm>
-                    <div className='sitePicPlaceholder'>headpage pic</div>
-                    <Typography variant='h3' className={classes.pageTitle}>LOGIN</Typography>
+                <img src={welcomeIcon} alt="welcome" className={classes.welcome}/>
+                    <Typography variant='h3' className={classes.pageTitle}>SIGN UP</Typography>
                     <form noValidate onSubmit={this.handleSubmit} className={classes.columnForm}>
                         <TextField
                             name="email"
@@ -127,7 +130,7 @@ class Signup extends Component {
                         <TextField
                             name="confirmPassword"
                             type="password"
-                            label="ConfirmPassword"
+                            label="Confirm Password"
                             className={classes.textField} value={this.state.confirmPassword}
                             onChange={this.handleChange}
                             helperText={errors.confirmPassword}
